@@ -95,10 +95,6 @@ if (TARGET === 'build') {
         amd: 'react'
       }
     }],
-    optimization: {
-      // We no not want to minimize our code.
-      minimize: false
-    },
     plugins: [
       new webpack.DefinePlugin({
         'process.env': {
@@ -106,11 +102,11 @@ if (TARGET === 'build') {
         },
         '__DEV__': false
       }),
-      // new webpack.optimize.UglifyJsPlugin({
-      //   compress: {
-      //     warnings: false
-      //   }
-      // }),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      }),
       new webpack.optimize.DedupePlugin()
     ]
   });
