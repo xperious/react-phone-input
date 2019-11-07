@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "TARGET=dev webpack-dev-server --progress",
-    "build": "TARGET=build webpack -p --progress"
+    "build": "TARGET=dev webpack -p --progress"
   },
   "repository": {
     "type": "git",
