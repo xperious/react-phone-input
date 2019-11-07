@@ -136,6 +136,7 @@ class ReactPhoneInput extends React.Component {
         formattedNumber
     }, function() {
       if(this.props.onChange) {
+        console.log('updateDefaultCountry');
         this.props.onChange(formattedNumber);
       }
     });
@@ -165,6 +166,7 @@ class ReactPhoneInput extends React.Component {
         formattedNumber: formattedNumber
     }, function() {
       if(this.props.onChange) {
+        console.log('updateFormattedNumber');
         this.props.onChange(formattedNumber);
       }
     })
